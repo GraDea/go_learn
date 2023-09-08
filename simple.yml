@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp1
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webapp1
-          image: tltdev/goweb:latest
+          image: ghcr.io/gradea/go_learn:1.0.0
           ports:
             - containerPort: 8080
 ---
@@ -26,6 +27,6 @@ metadata:
     app: webapp1
 spec:
   ports:
-    - port: 80
+    - port: 8080
   selector:
     app: webapp1

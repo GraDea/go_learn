@@ -7,7 +7,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "your host is %s!", r.URL.Host)
+	fmt.Fprintf(w, "YOUR host is %s!", r.Host)
 }
 
 func main() {
