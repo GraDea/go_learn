@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webapp1
-          image: ghcr.io/gradea/go_learn:1.0.0
+          image: ghcr.io/gradea/go_learn:1.1.0
           ports:
             - containerPort: 8080
 ---
